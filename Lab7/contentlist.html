@@ -9,11 +9,22 @@
 		</style>
 	</head>
 	<body id="task2" onload="">
-	<!--add a button to call our addContent method-->
-	<script src="contentlist.js"></script>
-	<button type="button" onclick="addContent()">
-		Ducktales!
-	</button>
+		<!--add a button to call our addContent method-->
+		<script src="contentlist.js"></script>
+		<button type="button" onclick="addContent()">
+			Ducktales!
+		</button>
+
+		<button type="button" onclick="addContent2()">
+			Woohoo!
+		</button>
+
+		<div id=search>
+			<form name='search'>
+				<input type="text" name="q" id="searchbox" size="50">
+				<input type="submit" name="submit" value="Submit" onclick="testResults(this.form)">
+			</form>
+		</div>
 
 		<div id="content">
 			<!-- empty div to manipulate -->
