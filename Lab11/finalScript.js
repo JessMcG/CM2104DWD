@@ -29,6 +29,6 @@ function addResultTitles(jsondata) {
   }
 
   //stick the HTML into the empty list
-  $('#results').html(htmlstring);
+  $('#results').append(htmlstring);
 
 }
