@@ -22,5 +22,5 @@ function getResultsFromOMDB(searchterms) {
 function prettyPrintJSON (jsondata){
   //prints JSON to screen
   var pretty = JSON.stringify(jsondata, null, 4);
-  $('#resultsbox').append("<p>"+pretty+"</p>");
+  $('#resultsbox').append("<pre>"+pretty+"</pre>");
 }
