@@ -2,8 +2,7 @@ $(function(){
   alert("document ready");
 
   $('#searchform').submit(function(){
-    var searchterms  =$("#searchterms").val();
-    addItemToList(searchterms);
+    var searchterms  = $("#searchterms").val();
     //call the search OMDB function
     getResultsFromOMDB(searchterms);
     return false;
