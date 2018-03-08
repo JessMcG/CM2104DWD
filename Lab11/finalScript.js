@@ -15,12 +15,20 @@ function getResultsFromOMDB(searchterms) {
   //use jQuery JSON shortcut
   $.getJSON(url, function(jsondata){
     //handle the results
-    prettyPrintJSON(jsondata);
+    addResultTitles(jsondata);
   });
 }
 
-function prettyPrintJSON (jsondata){
-  //prints JSON to screen
-  var pretty = JSON.stringify(jsondata, null, 4);
-  $('#resultsbox').append("<pre>"+ pretty +"</pre>");
+function addResultTitles(jsondata) {
+  var htmlstring = "";
+  //iterate the results
+  for (var i = 0; i < 10; i++)
+  {
+    var title = jsondata.Search[i].Title;
+    htmlstring += "<li>" + title + "</li>";
+  }
+
+  //stick the HTML into the empty list
+  $("results").html(htmlstring);
+
 }
