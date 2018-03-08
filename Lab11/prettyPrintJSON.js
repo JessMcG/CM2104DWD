@@ -15,7 +15,7 @@ function getResultsFromOMDB(searchterms) {
   //use jQuery JSON shortcut
   $.getJSON(url, function(jsondata){
     //handle the results
-    printJSON(jsondata);
+    prettyPrintJSON(jsondata);
   });
 }
 
