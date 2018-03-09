@@ -28,7 +28,7 @@ function addResultTitles(jsondata) {
     var year = jsondata.Search[i].Year;
     var poster = jsondata.Search[i].Poster;
     htmlstring += "<p>" + title + "(" + year + ")";
-    htmlstring += "<img src="+poster+">""</p>";
+    htmlstring += "<img src="+poster+">"+"</p>";
     console.log(jsondata.Search[i].Title);
   }
 
