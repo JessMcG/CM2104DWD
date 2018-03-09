@@ -1,7 +1,7 @@
 $(function(){
   alert("document ready");
 
-  $('#searchform').submit(function(){
+  $('#searchform').submit(function() {
     var searchterms  = $("#searchterms").val();
     //call the search OMDB function
     getResultsFromOMDB(searchterms);
@@ -26,9 +26,10 @@ function addResultTitles(jsondata) {
   {
     var title = jsondata.Search[i].Title;
     htmlstring += "<li>" + title + "</li>";
+    console.log(jsondata.Search[i].Title);
   }
 
   //stick the HTML into the empty list
-  $('#results').append(htmlstring);
+  $('#results').html(htmlstring);
 
 }
