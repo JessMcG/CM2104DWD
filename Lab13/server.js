@@ -13,7 +13,7 @@ app.get('/test', function(req, res){
 
 app.get('/joke', function(req, res){
   var randomJoke = oneLinerJoke.getRandomJoke();
-  res.send(randomJoke);
+  res.send(randomJoke.body);
 });
 
 app.listen(8080);
