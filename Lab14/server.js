@@ -15,10 +15,10 @@ app.get('/', function(req, res){
   var params = {screen_name: 'nodejs'};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if(!error) {
-      res.send(tweets);
+      res.write(tweets);
     }
   });
-  res.send("Hello world! by express");
+  res.write("Hello world! by express");
 });
 
 app.listen(8080);
